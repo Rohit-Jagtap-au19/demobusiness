@@ -6,7 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import Sidenav2 from "../components/Sidenav2";
 
-export default function AllInterns() {
+export default function ActiveInternships() {
   const { isAuthenticated, user } = useAuth0();
 
   if (!isAuthenticated) {
@@ -21,10 +21,10 @@ export default function AllInterns() {
         <Grid container>
           <Grid item xs={12} sm={12}>
             <Typography variant="h4" component="h1" gutterBottom>
-              Welcome to All Intern data
+              Welcome to All Active Internships
             </Typography>
             <Typography variant="h5" component="h1" gutterBottom>
-              here You will find all the intern which inroll into {user.name}{" "}
+              here You will find Only Active {user.name}
               programs
             </Typography>
           </Grid>

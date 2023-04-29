@@ -146,7 +146,7 @@ export default function Sidenav() {
         </DrawerHeader>
         <Box height={10}/>
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Dashboard", "All Program", "Upload Program", "All Applicants"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
