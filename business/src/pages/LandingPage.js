@@ -1,11 +1,18 @@
 import React from "react";
+import {Navigate} from 'react-router-dom'
 import { Button, Container, Grid, Typography } from "@mui/material";
-
-
+import { useAuth0 } from "@auth0/auth0-react";
+import Navbar from "../components/Navbar";
 
 export default function LandingPage() {
+  const { isAuthenticated } = useAuth0();
+  if (isAuthenticated) {
+    return <Navigate to="dashboard" />;
+  }
   return (
+    
     <div >
+    <Navbar/>
       <Container maxWidth="md">
         <Grid container spacing={3} justify="center" alignItems="center">
           <Grid item xs={12} sm={6}>
@@ -39,3 +46,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+
